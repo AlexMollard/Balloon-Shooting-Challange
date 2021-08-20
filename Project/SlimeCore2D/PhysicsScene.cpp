@@ -76,10 +76,15 @@ void PhysicsScene::update(float dt) {
 
 			if (glm::length(result) > 0.01)
 			{
-				other->SetNormal(result);
+				other->SetLastHitRigidBody(object);
 
+				other->SetNormal(result);
 				other->ApplyOffSetToActor(object, glm::vec3(result, 0));
 				other->resolveCollision(object);
+			}
+			else
+			{
+				other->SetLastHitRigidBody(nullptr);
 			}
 
 		}

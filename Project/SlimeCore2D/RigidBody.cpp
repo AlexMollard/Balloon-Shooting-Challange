@@ -117,6 +117,16 @@ bool RigidBody::GetIsColliding(RigidBody* other)
 	return (GetBoundingBox()->GetIsColliding(*other->GetBoundingBox()));
 }
 
+void RigidBody::SetLastHitRigidBody(RigidBody* other)
+{
+	LastHitRigidBody = other;
+}
+
+RigidBody* RigidBody::GetLastHitRigidBody()
+{
+	return LastHitRigidBody;
+}
+
 void RigidBody::SetNormal(glm::vec2 newNormal)
 {
 	normal = newNormal;
@@ -158,6 +168,7 @@ void RigidBody::SetBoundingBox(glm::vec2 offset, glm::vec2 scale)
 	boundingBox.scale = scale;
 	useBoundingBox = true;
 }
+
 
 void RigidBody::resolveCollision(RigidBody* actor2)
 {

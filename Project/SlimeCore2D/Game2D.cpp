@@ -24,7 +24,7 @@ void Game2D::Init()
 	objectManager = new ObjectManager(renderer);
 	physicsScene = new PhysicsScene();
 	Input::GetInstance()->SetCamera(camera);
-	balloonGame = new BalloonShooting(objectManager);
+	balloonGame = new BalloonShooting(objectManager, physicsScene);
 }
 
 void Game2D::Update(float deltaTime)
@@ -38,4 +38,5 @@ void Game2D::Update(float deltaTime)
 void Game2D::Draw()
 {
 	renderer->Draw();
+	//physicsScene->Debug();
 }

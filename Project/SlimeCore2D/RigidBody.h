@@ -39,6 +39,9 @@ public:
 
 	bool GetIsColliding(RigidBody* other);
 
+	void SetLastHitRigidBody(RigidBody* other);
+	RigidBody* GetLastHitRigidBody();
+
 	virtual void SetNormal(glm::vec2 newNormal);
 	glm::vec2 GetNormal();
 
@@ -46,7 +49,6 @@ public:
 
 	BoundingBox* GetBoundingBox();
 	void SetBoundingBox(glm::vec2 offset, glm::vec2 scale);
-
 
 	glm::vec2 GetScale();
 	void SetScale(glm::vec2 newScale);
@@ -66,6 +68,7 @@ public:
 	int ID = -404;
 	bool useBoundingBox = false;
 protected:
+	RigidBody* LastHitRigidBody = nullptr;
 
 	glm::vec3 position = glm::vec3(0);
 	glm::vec3 localPosition = glm::vec3(0);
