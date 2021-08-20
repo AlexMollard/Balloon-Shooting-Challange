@@ -25,7 +25,6 @@ void Game2D::Init()
 	objectManager = new ObjectManager(renderer);
 	physicsScene = new PhysicsScene();
 	Input::GetInstance()->SetCamera(camera);
-
 	snakeGame = new Snake(camera, renderer, objectManager);
 }
 
@@ -35,7 +34,6 @@ void Game2D::Update(float deltaTime)
 	physicsScene->update(deltaTime);
 	objectManager->UpdateFrames(deltaTime);
 	snakeGame->Update(deltaTime);
-
 }
 
 void Game2D::Draw()
