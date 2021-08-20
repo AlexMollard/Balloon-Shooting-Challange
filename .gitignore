@@ -23,7 +23,6 @@
 
 *.opendb
 
-*.tlog
 *.log
 *.suo
 *.idb
