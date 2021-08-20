@@ -24,7 +24,7 @@ BalloonShooting::BalloonShooting(ObjectManager* objManager, PhysicsScene* physic
 	pScene->addActor(balloonObject, "balloon", true);
 	balloon = new Balloon(balloonObject);
 	
-	textShader = new Shader("Text Shader", "textVert.shader", "textFrag.shader");
+	textShader = new Shader("Text Shader", "../Shaders/textVert.shader", "../Shaders/textFrag.shader");
 	textDisplay = new Text();
 }
 
