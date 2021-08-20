@@ -3,7 +3,6 @@
 Game2D::Game2D()
 {
 	Init();
-
 }
 
 Game2D::~Game2D()
@@ -13,6 +12,9 @@ Game2D::~Game2D()
 
 	delete objectManager;
 	objectManager = nullptr;
+
+	delete balloonGame;
+	balloonGame = nullptr;
 }
 
 void Game2D::Init()
@@ -22,7 +24,7 @@ void Game2D::Init()
 	objectManager = new ObjectManager(renderer);
 	physicsScene = new PhysicsScene();
 	Input::GetInstance()->SetCamera(camera);
-	objectManager->CreateGameObject(glm::vec3(0), glm::vec2(2), glm::uvec3(1, 0, 1));
+	balloonGame = new BalloonShooting(objectManager);
 }
 
 void Game2D::Update(float deltaTime)
@@ -30,6 +32,7 @@ void Game2D::Update(float deltaTime)
 	camera->Update(deltaTime);
 	physicsScene->update(deltaTime);
 	objectManager->UpdateFrames(deltaTime);
+	balloonGame->Update(deltaTime);
 }
 
 void Game2D::Draw()

@@ -1,6 +1,7 @@
 #pragma once
 #include "ObjectManager.h"
 #include "PhysicsScene.h"
+#include "BalloonShooting.h"
 
 class Game2D
 {
@@ -19,7 +20,7 @@ private:
 	Input* inputManager = Input::GetInstance();
 	PhysicsScene* physicsScene = nullptr;
 	Camera* camera = nullptr;
-	GameObject* testObject = nullptr;
+	BalloonShooting* balloonGame = nullptr;
 
 	float timer = 0.0f;
 };

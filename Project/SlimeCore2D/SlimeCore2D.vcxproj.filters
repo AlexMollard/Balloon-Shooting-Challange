@@ -72,13 +72,10 @@
     <ClCompile Include="Sprite.cpp">
       <Filter>Source Files\EngineCore</Filter>
     </ClCompile>
-    <ClCompile Include="Snake.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Cell.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Text.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BalloonShooting.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -134,13 +131,10 @@
     <ClInclude Include="Math.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Snake.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Cell.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Text.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BalloonShooting.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
