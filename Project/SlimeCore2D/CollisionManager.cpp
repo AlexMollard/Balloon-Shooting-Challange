@@ -7,6 +7,7 @@ CollisionManager::CollisionManager()
 CollisionManager::~CollisionManager()
 {
 }
+
 glm::vec2 CollisionManager::QuadVsQuad(RigidBody* rbOne, RigidBody* rbTwo)
 {
 	glm::vec2 overlapVector = { 0,0 };
@@ -72,4 +73,19 @@ glm::vec2 CollisionManager::QuadVsQuad(RigidBody* rbOne, RigidBody* rbTwo)
 		return glm::vec2(0.0f);
 
 	return overlapVector;
+}
+
+glm::vec2 CollisionManager::CircleVsCircle(RigidBody* rbOne, RigidBody* rbTwo)
+{
+	glm::vec2 displacement = (rbOne->GetPos() - rbTwo->GetPos()); 
+	
+	float sumOfRadii = rbOne->GetRadius() + rbTwo->GetRadius();
+	float overLap = (sumOfRadii)-glm::length(displacement); 
+
+	if (overLap > 0.0f)
+	{
+		return glm::normalize(displacement) * overLap;
+	}
+	else
+		return glm::vec2(0.0f);
 }
