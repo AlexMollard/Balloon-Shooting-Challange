@@ -28,6 +28,9 @@ public:
 	float GetMass() { return mass; };
 	void SetMass(float newMass) { mass = newMass; };
 
+	float GetRadius() { return radius; };
+	void SetRadius(float newRadius) { radius = newRadius; }; 
+
 	void ApplyForceToActor(RigidBody* obj, glm::vec2 force);
 	void ApplyForce(glm::vec2 force);
 
@@ -82,4 +85,5 @@ protected:
 
 	float drag = 3.0f;
 	float mass = 1.0f;
+	float radius = 0.0f; 
 };
