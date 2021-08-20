@@ -22,3 +22,9 @@
 *.app
 
 *.opendb
+
+*.tlog
+*.log
+*.suo
+*.idb
+*.pdb
